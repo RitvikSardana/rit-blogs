@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+// import React from 'react'
+import Home from "./Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CreateBlog from "./CreateBlog";
+import BlogDetails from "./BlogDetails";
+import NotFound from "./NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/CreateBlog">
+              <CreateBlog />
+            </Route>
+            <Route path="/blogs/:id">
+              <BlogDetails/>
+            </Route>
+            <Route path="*">
+              {/* path = "*" means if none of the abovce address is matches go to NotFound file */}
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
-
+// npm run start
+// npx json-server --watch data/db.json --port 3069
 export default App;

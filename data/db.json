@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "My  blog",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque ipsum autem nihil placeat fuga mollitia, fugiat aperiam distinctio totam nulla maiores tenetur officiis, voluptate delectus quisquam repudiandae iusto accusantium!",
+      "author": "Mario",
+      "id": 1
+    },
+    {
+      "title": "Luigi",
+      "body": "asdasjhskdnkndsfknsd",
+      "author": "mario",
+      "id": 2
+    }
+  ]
+}
